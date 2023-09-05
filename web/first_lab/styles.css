@@ -1,0 +1,93 @@
+header{
+    width: 1120px;
+    height: 60px;
+    top: 50px;
+    left: 240px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin: 0px 128px 694px 0px;
+    
+}
+nav{
+    display: flex;
+    width: 322px;
+    height: 30px;
+    flex-shrink: 0;
+    position: absolute;
+    margin: 15px 628px 15px 170px;
+    align-self: center;
+}
+#logo{
+    display: flex;
+    position: absolute;
+    width: 49px;
+    height: 35px;
+    flex-shrink: 0;
+    margin: 12px 1071px 13px 0px; 
+
+}
+#demoButton{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 60px;
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+    justify-self: flex-end;
+    margin: 0px 0px 0px 910px;
+}
+#arrow{
+    display: flex;
+    width: 20px;
+    height: 14px;
+    border: 2px;
+    align-self: center;
+    flex-shrink: 0;
+}
+#textInDemoButton{
+    display: flex;
+    
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.08px;
+    width: 112px;
+    height: 26px;
+    
+}
+.headerText{
+    display: flex;
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 25.6px */
+    flex: 1;
+    align-self: center;
+
+}
+#mainHeaderText{
+    display: flex;
+    flex-shrink: 0;
+    flex: 1;
+    align-self: center;
+
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height:  25.6px;
+    
+    width: 53px;
+    height: 30px;
+    
+}
