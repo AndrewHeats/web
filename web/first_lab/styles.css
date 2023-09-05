@@ -1,64 +1,67 @@
 header{
-    width: 1120px;
-    height: 60px;
-    top: 50px;
-    left: 240px;
-    margin: auto;
-    display: flex;
     align-items: center;
-    margin: 0px 128px 694px 0px;
-    
+    display: flex;
+    min-width: 1120px;  
 }
 nav{
+    align-items: center;
     display: flex;
-    width: 322px;
+    gap: 40px;
     height: 30px;
-    flex-shrink: 0;
-    position: absolute;
-    margin: 15px 628px 15px 170px;
-    align-self: center;
+    margin-left: 121px;
+    min-width: 330px;
 }
-#logo{
+.logo{
+    align-items: flex-end;
     display: flex;
-    position: absolute;
-    width: 49px;
+    gap: 9px;
+    margin-bottom: 1px;
+    min-width: 49px;
+}
+.rectangle-1{
+    background-color: rgba(156, 105, 226,1);
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+}
+.rectangle-2{
+    background-color: rgba(240, 99, 184, 1);
+    border-radius: 20px;
     height: 35px;
-    flex-shrink: 0;
-    margin: 12px 1071px 13px 0px; 
-
+    width: 20px;
 }
 #demoButton{
-    position: absolute;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 210px;
-    height: 60px;
+    background-color: white;
     border-radius: 50px;
-    background: #FFF;
-    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
-    justify-self: flex-end;
-    margin: 0px 0px 0px 910px;
+    box-shadow: 0px 5px 5px #4A5C671A;
+    display: flex;
+    gap: 19px;
+    height: 60px;
+    justify-content: flex-end;
+    margin-left: 410px;
+    min-width: 210px;
+    padding: 0 28px;
+
+    
 }
 #arrow{
-    display: flex;
-    width: 20px;
-    height: 14px;
-    border: 2px;
-    align-self: center;
-    flex-shrink: 0;
+    width: 22px;
+    height: 16px;   
 }
 #textInDemoButton{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     
     color: var(--2, #212353);
     font-family: Avenir;
     font-size: 16px;
     font-style: normal;
     font-weight: 800;
-    line-height: 160%; /* 25.6px */
+    line-height: 160%; 
     letter-spacing: 0.08px;
-    width: 112px;
+    min-width: 112px;
     height: 26px;
     
 }
@@ -90,4 +93,13 @@ nav{
     width: 53px;
     height: 30px;
     
+}
+#Headline{
+    display: flex;
+}
+#mainHeadline{
+   
+}
+#mainHeadlineText{
+   
 }
