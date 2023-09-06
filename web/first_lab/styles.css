@@ -1,5 +1,8 @@
 .top{
     margin-left: 240px;
+    width: 1248px;
+    height: 754px;
+    flex-shrink: 0;
 }
 header{
     align-items: center;
@@ -158,4 +161,63 @@ nav{
     font-weight: 500;
     line-height: 160%; /* 28.8px */
     flex:1;
+}
+
+.pinkMiddle{
+    display: flex;
+    
+    width: 1117px;
+    height: 560px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: rgba(240, 99, 184, 0.15);
+    margin-left: 240px;
+    margin-top: 99px;
+    align-content: center;
+}
+
+.image2{
+    
+    width: 477px;
+    height: 504px;
+    border-radius: 50px;
+}
+
+#mainMiddleText{
+
+    display: flex;
+    width: 475px;
+    height: 100px;
+    justify-content: center;
+
+    
+    color: #212353;
+
+    font-family: Helvetica;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; 
+}
+
+#middleText{
+    display: flex;
+    width: 474px;
+    height: 170px;
+
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 28.8px */
+}
+.textMiddleClass{
+    display: flex;
+    width: 475px;
+    height: 310px;
+    flex-direction: column;
+    align-self: center;
+    justify-self: flex-end;
+    margin-left: 90px;
 }
