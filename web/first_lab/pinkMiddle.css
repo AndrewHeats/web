@@ -2,34 +2,27 @@
 
 .pinkMiddle{
     display: flex;
-    
-    width: 1117px;
-    height: 560px;
+    width: 71%;
     flex-shrink: 0;
     border-radius: 50px;
     background: rgba(240, 99, 184, 0.15);
-    margin-left: 240px;
-    margin-top: 99px;
     align-content: center;
+    margin-top: 20%;
+    margin-left: 17%;
 }
 
 .image2{
     
-    width: 477px;
-    height: 504px;
+    width: 45%;
     border-radius: 50px;
+    align-self: center;
 }
 
-#mainMiddleText{
+.mainMiddleText{
 
     display: flex;
-    width: 475px;
-    height: 100px;
-    justify-content: center;
-
-    
+    width: 100%;
     color: #212353;
-
     font-family: Helvetica;
     font-size: 40px;
     font-style: normal;
@@ -37,24 +30,23 @@
     line-height: 130%; 
 }
 
-#middleText{
+.middleText{
     display: flex;
-    width: 474px;
-    height: 170px;
+    width: 100%;
+    align-self: center;
 
     color: var(--1, #4B5D68);
     font-family: Avenir;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 160%; /* 28.8px */
+    line-height: 160%;
+    padding-bottom: 10%;
 }
 .textMiddleClass{
     display: flex;
-    width: 475px;
-    height: 310px;
+    width: 55%;
     flex-direction: column;
-    align-self: center;
-    justify-self: flex-end;
-    margin-left: 90px;
+    align-content: space-between;
+    justify-self: end;
 }
