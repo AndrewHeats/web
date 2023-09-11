@@ -1,0 +1,163 @@
+
+.top{
+    margin-left: 240px;
+    width: 1248px;
+    height: 754px;
+    flex-shrink: 0;
+}
+header{
+    align-items: center;
+    display: flex;
+    min-width: 1120px;  
+}
+nav{
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    height: 30px;
+    margin-left: 121px;
+    width: 322px;
+    height: 30px;
+    flex-shrink: 0;
+
+}
+.logo{
+    align-items: flex-end;
+    display: flex;
+    gap: 9px;
+    margin-bottom: 1px;
+    min-width: 49px;
+}
+.rectangle-1{
+    background-color: rgba(156, 105, 226,1);
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+}
+.rectangle-2{
+    background-color: rgba(240, 99, 184, 1);
+    border-radius: 20px;
+    height: 35px;
+    width: 20px;
+}
+#demoButton{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 210px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+    margin-left: 418px;
+    
+    
+}
+#arrow{
+    width: 22px;
+    height: 16px;   
+}
+#textInDemoButton{
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 160%;
+    letter-spacing: 0.08px;
+    
+}
+
+.headerText{
+    display: flex;
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 25.6px */
+    flex: 1;
+    align-self: center;
+    width: 51px;
+    height: 26px;
+}
+#mainHeaderText{
+    display: flex;
+    flex-shrink: 0;
+    flex: 1;
+    align-self: center;
+
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height:  25.6px;
+    
+    width: 53px;
+    height: 30px;
+    
+}
+#Headline{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#mainHeadline{
+    display: flex;
+    width: 645px;
+    height: 184px;
+    flex:1;
+}
+#mainHeadlineText{
+    color:  #212353;
+    font-family: Helvetica;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 88px */
+}
+.image1{
+    
+    height: 468px;
+    position: absolute;
+    object-fit: cover;
+    margin-left: 300px;
+    margin-top: 100px;
+
+}
+#learnMoreButton{
+    display: flex;
+    flex:1;
+
+    background-color: #9C69E2;
+    border-radius: 50px;
+    width: 170px;
+    height: 60px;
+    justify-content: center;
+    
+}
+#textInLearnMoreButton{
+    display: flex;
+    color: #FFF;
+    
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 28.8px */
+}
+.HeadlineText{
+    width: 380px;
+    min-height: 120px;
+    flex-shrink: 0;
+    
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 28.8px */
+    flex:1;
+}
