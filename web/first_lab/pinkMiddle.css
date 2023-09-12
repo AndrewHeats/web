@@ -2,18 +2,18 @@
 
 .pinkMiddle{
     display: flex;
-    width: 71%;
     flex-shrink: 0;
     border-radius: 50px;
     background: rgba(240, 99, 184, 0.15);
     align-content: center;
     margin-top: 20%;
-    margin-left: 17%;
+    width: 70%;
+    align-self: center;
 }
 
 .image2{
     
-    width: 45%;
+    width: 400px;
     border-radius: 50px;
     align-self: center;
 }
@@ -49,4 +49,16 @@
     flex-direction: column;
     align-content: space-between;
     justify-self: end;
+}
+
+@media screen and (min-width:2000px){
+    .image2{
+        width: 600px;
+    }
+    .middleText{
+        font-size: 28px;
+    }
+    .mainMiddleText{
+        font-size: 50px;
+    }
 }

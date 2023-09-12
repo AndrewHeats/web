@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     margin-top: 10%;
-    margin-left: 10%;
+    align-content: center;
+
 }
 .title{
     display: flex;
@@ -14,7 +15,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     height: 1134px;
-    width: 1200px;
+    width: 100%;
 }
 .mainTitleText{
     color: #212353;
@@ -54,7 +55,7 @@
     margin: 30px 0px 0px 89.3px;
     object-fit: cover;
 }
-.mainTextFirst{
+.titleFirst{
     position: absolute;
     display: flex;
     width: 200px;
@@ -131,7 +132,7 @@
     margin: 30px 0px 0px 89.3px;
     object-fit: cover;
 }
-.mainTextThird{
+.titleThird{
     position: absolute;
     display: flex;
     width: 200px;
@@ -207,7 +208,7 @@
     margin: 30px 0px 0px 89.3px;
     object-fit: cover;
 }
-.mainTextSecond{
+.titleSecond{
     position: absolute;
     display: flex;
     width: 200px;
@@ -283,7 +284,7 @@
     margin: 30px 0px 0px 89.3px;
     object-fit: cover;
 }
-.mainTextFourth{
+.titleFourth{
     position: absolute;
     display: flex;
     width: 200px;
@@ -340,4 +341,29 @@
     margin-top: 316px;
     margin-left: 390px; 
     object-fit: cover;
+}
+
+@media screen and (min-width: 2000px) {
+    .whiteMiddle{
+        margin-left: 7%;
+    }
+    .mainTitleText{
+        font-size: 50px;
+
+    }
+    .titleText{
+        font-size: 28px;
+    }
+    .firstFeature{
+        justify-self: center;
+    }
+    .secondFeature{
+        justify-self: center; 
+    }
+    .thirdFeature{
+        justify-self: center;
+    }
+    .fourthFeature{
+        justify-self: center;
+    }
 }

@@ -5,6 +5,7 @@
     margin-top: 3%;
 
 }
+
 header{
     align-items: center;
     display: flex;
@@ -21,8 +22,8 @@ nav{
     align-items: flex-end;
     display: flex;
     gap:9px;
-    min-width: 49px;
-    flex:2;
+    width: 49px;
+    flex:1;
 }
 .rectangle-1{
     background-color: rgba(156, 105, 226,1);
@@ -37,27 +38,29 @@ nav{
     width: 20px;
 }
 .demoButton{
-    align-items: center;
+    margin-right: 12%;
+    align-self: center;
     display: flex;
-    justify-content: space-around;
-    height: 60px;
-    width:17%;
-    flex-shrink: 0;
     border-radius: 50px;
     background: #FFF;
-    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.1);
+    justify-content: space-between;
+    align-content: center;
 }
 .arrow{
+    padding: 10px 15px;
     width: 22px;
     height: 16px;   
 }
 .textInDemoButton{
+    padding: 10px 15px;
+
     color: var(--2, #212353);
     font-family: Avenir;
     font-size: 16px;
     font-style: normal;
     font-weight: 900;
-    line-height: 160%;
+    line-height: 160%; /* 25.6px */
     letter-spacing: 0.08px;
     
     
@@ -91,14 +94,8 @@ nav{
 .Headline{
     display: flex;
     flex-direction: column;
-    position: relative;
 }
-.mainHeadline{
-    display: flex;
-    width: 50%;
-    flex:1;
-}
-.mainHeadlineText{
+.Title{
     color:  #212353;
     font-family: Helvetica;
     font-size: 80px;
@@ -109,34 +106,24 @@ nav{
 .image1{
     
     height: 468px;
-    position: absolute;
     object-fit: cover;
-    margin-left: 23%;
-    margin-top: 8%;
+    align-self: center;
 
 }
 .learnMoreButton{
-    display: flex;
-    flex:1;
-
+    max-width: 30%;
+    padding:20px 25px;
     background-color: #9C69E2;
     border-radius: 50px;
-    width: 170px;
-    height: 60px;
-    justify-content: center;
-    
-}
-.textInLearnMoreButton{
+    text-align: center;
     color: #FFF;
     
     font-family: Avenir;
     font-size: 18px;
     font-style: normal;
     font-weight: 800;
-    line-height: 160%; 
 }
-.HeadlineText{
-    width: 40%;
+.Text{
     flex-shrink: 0;
     
     color: var(--1, #4B5D68);
@@ -146,4 +133,28 @@ nav{
     font-weight: 500;
     line-height: 160%; 
     flex:1;
+}
+.Greeting{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+
+@media screen and (min-width: 2000px){
+    .top{
+        margin-left: 5%;
+    }
+    .menuText{
+        font-size: larger;
+    }
+    .Text{
+        font-size: x-large;
+    }
+    .learnMoreButton{
+        width: 110px;
+    }
+    .image1{
+        margin-top: 6%;
+    }
+    
 }
