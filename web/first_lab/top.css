@@ -1,0 +1,149 @@
+
+.top{
+    flex-shrink: 0;
+    margin-left: 10%;
+    margin-top: 3%;
+
+}
+header{
+    align-items: center;
+    display: flex;
+     
+}
+nav{
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    flex: 5;
+
+}
+.logo{
+    align-items: flex-end;
+    display: flex;
+    gap:9px;
+    min-width: 49px;
+    flex:2;
+}
+.rectangle-1{
+    background-color: rgba(156, 105, 226,1);
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+}
+.rectangle-2{
+    background-color: rgba(240, 99, 184, 1);
+    border-radius: 20px;
+    height: 35px;
+    width: 20px;
+}
+.demoButton{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    width:17%;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+}
+.arrow{
+    width: 22px;
+    height: 16px;   
+}
+.textInDemoButton{
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 160%;
+    letter-spacing: 0.08px;
+    
+    
+}
+
+.menuText{
+    display: flex;
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    align-self: center;
+    
+}
+.menuText1{
+    display: flex;
+    flex-shrink: 0;
+    align-self: center;
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height:  160%;
+    
+
+    
+}
+.Headline{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.mainHeadline{
+    display: flex;
+    width: 50%;
+    flex:1;
+}
+.mainHeadlineText{
+    color:  #212353;
+    font-family: Helvetica;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; 
+}
+.image1{
+    
+    height: 468px;
+    position: absolute;
+    object-fit: cover;
+    margin-left: 23%;
+    margin-top: 8%;
+
+}
+.learnMoreButton{
+    display: flex;
+    flex:1;
+
+    background-color: #9C69E2;
+    border-radius: 50px;
+    width: 170px;
+    height: 60px;
+    justify-content: center;
+    
+}
+.textInLearnMoreButton{
+    color: #FFF;
+    
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; 
+}
+.HeadlineText{
+    width: 40%;
+    flex-shrink: 0;
+    
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; 
+    flex:1;
+}

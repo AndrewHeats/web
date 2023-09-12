@@ -1,0 +1,343 @@
+.whiteMiddle{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.features{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 1134px;
+    width: 1200px;
+}
+.mainTitleText{
+    color: #212353;
+    
+    font-family: Helvetica;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+
+}
+.titleText{
+    width: 100%;
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; 
+    
+}    
+/*first*/
+
+.firstFeature{
+    position: relative;
+    width: 50%;
+}
+.image3{
+    position: absolute;
+    margin: 103px 299px 74px 0px;
+}
+.rectangle1{
+    position: absolute;
+    width: 442px;
+    height: 358px;
+    flex-shrink: 0;
+    margin: 30px 0px 0px 89.3px;
+    object-fit: cover;
+}
+.mainTextFirst{
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    flex-direction: column;
+    margin-left: 290px;
+    margin-top: 89px;
+
+    color: #212353;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 31.2px */
+}
+.textFirst{
+    position: absolute;
+    display: flex;
+    width: 220px;
+    height: 160px;
+    flex-shrink: 0;
+    margin-left: 290px;
+    margin-top: 149px;
+
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+}
+.learnMoreFirst{
+    position: absolute;
+    display: flex;
+    margin-top: 309px;
+    margin-left: 290px;
+    width:87px;
+    height:26px;
+
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.08px;
+}
+.arrow1{
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 14px;
+    
+    margin-top: 316px;
+    margin-left: 390px; 
+    object-fit: cover;
+}
+
+/*third*/
+.thirdFeature{
+    position: relative;
+    width: 50%;
+    height: 388px;
+}
+.image5{
+    position: absolute;
+    margin: 101px 305px 139px 0px;
+}
+.rectangle3{
+    position: absolute;
+    width: 442px;
+    height: 358px;
+    flex-shrink: 0;
+    margin: 30px 0px 0px 89.3px;
+    object-fit: cover;
+}
+.mainTextThird{
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    flex-direction: column;
+    margin-left: 290px;
+    margin-top: 89px;
+
+    color: #212353;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; 
+}
+.textThird{
+    position: absolute;
+    display: flex;
+    width: 220px;
+    height: 160px;
+    flex-shrink: 0;
+    margin-left: 290px;
+    margin-top: 149px;
+
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+}
+.learnMoreThird{
+    position: absolute;
+    display: flex;
+    margin-top: 309px;
+    margin-left: 290px;
+    width:87px;
+    height:26px;
+
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.08px;
+}
+.arrow3{
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 14px;
+    
+    margin-top: 316px;
+    margin-left: 390px; 
+    object-fit: cover;
+}
+
+/*second*/
+.secondFeature{
+    position: relative;
+    width: 50%;
+}
+.image4{
+    position: absolute;
+    margin: 101px 305px 139px 0px;
+}
+.rectangle2{
+    position: absolute;
+    width: 442px;
+    height: 358px;
+    flex-shrink: 0;
+    margin: 30px 0px 0px 89.3px;
+    object-fit: cover;
+}
+.mainTextSecond{
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    flex-direction: column;
+    margin-left: 290px;
+    margin-top: 89px;
+
+    color: #212353;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; 
+}
+.textSecond{
+    position: absolute;
+    display: flex;
+    width: 220px;
+    height: 160px;
+    flex-shrink: 0;
+    margin-left: 290px;
+    margin-top: 149px;
+
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+}
+.learnMoreSecond{
+    position: absolute;
+    display: flex;
+    margin-top: 309px;
+    margin-left: 290px;
+    width:87px;
+    height:26px;
+
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.08px;
+}
+.arrow2{
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 14px;
+    
+    margin-top: 316px;
+    margin-left: 390px; 
+    object-fit: cover;
+}
+
+/*fourth*/
+.fourthFeature{
+    position: relative;
+    width: 50%;
+}
+.image6{
+    position: absolute;
+    margin: 101px 305px 139px 0px;
+}
+.rectangle4{
+    position: absolute;
+    width: 442px;
+    height: 358px;
+    flex-shrink: 0;
+    margin: 30px 0px 0px 89.3px;
+    object-fit: cover;
+}
+.mainTextFourth{
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    flex-direction: column;
+    margin-left: 290px;
+    margin-top: 89px;
+
+    color: #212353;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; 
+}
+.textFourth{
+    position: absolute;
+    display: flex;
+    width: 220px;
+    height: 160px;
+    flex-shrink: 0;
+    margin-left: 290px;
+    margin-top: 149px;
+
+    color: var(--1, #4B5D68);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+}
+.learnMoreFourth{
+    position: absolute;
+    display: flex;
+    margin-top: 309px;
+    margin-left: 290px;
+    width:87px;
+    height:26px;
+
+    color: var(--2, #212353);
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.08px;
+}
+.arrow4{
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 14px;
+    
+    margin-top: 316px;
+    margin-left: 390px; 
+    object-fit: cover;
+}
