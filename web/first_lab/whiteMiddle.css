@@ -41,28 +41,28 @@
 
 .firstFeature{
     position: relative;
-    width: 50%;
+    display: flex;
 }
 .image3{
-    position: absolute;
-    margin: 103px 299px 74px 0px;
+    align-self: center;
 }
 .rectangle1{
     position: absolute;
     width: 442px;
     height: 358px;
     flex-shrink: 0;
-    margin: 30px 0px 0px 89.3px;
     object-fit: cover;
+    align-self: center;
+}
+.infoFirst{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: 30%;
+    
 }
 .titleFirst{
-    position: absolute;
-    display: flex;
-    width: 200px;
-    height: 50px;
-    flex-direction: column;
-    margin-left: 290px;
-    margin-top: 89px;
+    justify-self: center;
 
     color: #212353;
     font-family: Helvetica;
@@ -72,14 +72,6 @@
     line-height: 130%; /* 31.2px */
 }
 .textFirst{
-    position: absolute;
-    display: flex;
-    width: 220px;
-    height: 160px;
-    flex-shrink: 0;
-    margin-left: 290px;
-    margin-top: 149px;
-
     color: var(--1, #4B5D68);
     font-family: Avenir;
     font-size: 16px;
@@ -87,13 +79,13 @@
     font-weight: 400;
     line-height: 160%; 
 }
-.learnMoreFirst{
-    position: absolute;
+.learnMore1{
     display: flex;
-    margin-top: 309px;
-    margin-left: 290px;
-    width:87px;
-    height:26px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+.learnMoreFirst{
 
     color: var(--2, #212353);
     font-family: Avenir;
@@ -104,59 +96,47 @@
     letter-spacing: 0.08px;
 }
 .arrow1{
-    position: absolute;
-    display: flex;
+
     width: 20px;
     height: 14px;
-    
-    margin-top: 316px;
-    margin-left: 390px; 
     object-fit: cover;
+    align-self: center;
 }
 
 /*third*/
 .thirdFeature{
     position: relative;
-    width: 50%;
-    height: 388px;
+    display: flex;
 }
 .image5{
-    position: absolute;
-    margin: 101px 305px 139px 0px;
+    align-self: center;
 }
 .rectangle3{
     position: absolute;
     width: 442px;
     height: 358px;
     flex-shrink: 0;
-    margin: 30px 0px 0px 89.3px;
     object-fit: cover;
+    align-self: center;
+}
+.infoThird{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: 30%;
+    
 }
 .titleThird{
-    position: absolute;
-    display: flex;
-    width: 200px;
-    height: 50px;
-    flex-direction: column;
-    margin-left: 290px;
-    margin-top: 89px;
+    justify-self: center;
 
     color: #212353;
     font-family: Helvetica;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; 
+    line-height: 130%; /* 31.2px */
 }
 .textThird{
-    position: absolute;
-    display: flex;
-    width: 220px;
-    height: 160px;
-    flex-shrink: 0;
-    margin-left: 290px;
-    margin-top: 149px;
-
     color: var(--1, #4B5D68);
     font-family: Avenir;
     font-size: 16px;
@@ -164,13 +144,13 @@
     font-weight: 400;
     line-height: 160%; 
 }
-.learnMoreThird{
-    position: absolute;
+.learnMore3{
     display: flex;
-    margin-top: 309px;
-    margin-left: 290px;
-    width:87px;
-    height:26px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+.learnMoreThird{
 
     color: var(--2, #212353);
     font-family: Avenir;
@@ -181,58 +161,46 @@
     letter-spacing: 0.08px;
 }
 .arrow3{
-    position: absolute;
-    display: flex;
+
     width: 20px;
     height: 14px;
-    
-    margin-top: 316px;
-    margin-left: 390px; 
     object-fit: cover;
+    align-self: center;
 }
 
 /*second*/
 .secondFeature{
     position: relative;
-    width: 50%;
+    display: flex;
 }
 .image4{
-    position: absolute;
-    margin: 101px 305px 139px 0px;
+    align-self: center;
 }
 .rectangle2{
     position: absolute;
     width: 442px;
     height: 358px;
     flex-shrink: 0;
-    margin: 30px 0px 0px 89.3px;
     object-fit: cover;
+    align-self: center;
+}
+.infoSecond{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: 30%;
 }
 .titleSecond{
-    position: absolute;
-    display: flex;
-    width: 200px;
-    height: 50px;
-    flex-direction: column;
-    margin-left: 290px;
-    margin-top: 89px;
+    justify-self: center;
 
     color: #212353;
     font-family: Helvetica;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; 
+    line-height: 130%; /* 31.2px */
 }
 .textSecond{
-    position: absolute;
-    display: flex;
-    width: 220px;
-    height: 160px;
-    flex-shrink: 0;
-    margin-left: 290px;
-    margin-top: 149px;
-
     color: var(--1, #4B5D68);
     font-family: Avenir;
     font-size: 16px;
@@ -240,13 +208,13 @@
     font-weight: 400;
     line-height: 160%; 
 }
-.learnMoreSecond{
-    position: absolute;
+.learnMore2{
     display: flex;
-    margin-top: 309px;
-    margin-left: 290px;
-    width:87px;
-    height:26px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+.learnMoreSecond{
 
     color: var(--2, #212353);
     font-family: Avenir;
@@ -257,58 +225,47 @@
     letter-spacing: 0.08px;
 }
 .arrow2{
-    position: absolute;
-    display: flex;
+
     width: 20px;
     height: 14px;
-    
-    margin-top: 316px;
-    margin-left: 390px; 
     object-fit: cover;
+    align-self: center;
 }
 
 /*fourth*/
 .fourthFeature{
     position: relative;
-    width: 50%;
+    display: flex;
 }
 .image6{
-    position: absolute;
-    margin: 101px 305px 139px 0px;
+    align-self: center;
 }
 .rectangle4{
     position: absolute;
     width: 442px;
     height: 358px;
     flex-shrink: 0;
-    margin: 30px 0px 0px 89.3px;
     object-fit: cover;
+    align-self: center;
+}
+.infoFourth{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: 30%;
+    
 }
 .titleFourth{
-    position: absolute;
-    display: flex;
-    width: 200px;
-    height: 50px;
-    flex-direction: column;
-    margin-left: 290px;
-    margin-top: 89px;
+    justify-self: center;
 
     color: #212353;
     font-family: Helvetica;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; 
+    line-height: 130%; /* 31.2px */
 }
 .textFourth{
-    position: absolute;
-    display: flex;
-    width: 220px;
-    height: 160px;
-    flex-shrink: 0;
-    margin-left: 290px;
-    margin-top: 149px;
-
     color: var(--1, #4B5D68);
     font-family: Avenir;
     font-size: 16px;
@@ -316,13 +273,13 @@
     font-weight: 400;
     line-height: 160%; 
 }
-.learnMoreFourth{
-    position: absolute;
+.learnMore4{
     display: flex;
-    margin-top: 309px;
-    margin-left: 290px;
-    width:87px;
-    height:26px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+.learnMoreFourth{
 
     color: var(--2, #212353);
     font-family: Avenir;
@@ -333,14 +290,11 @@
     letter-spacing: 0.08px;
 }
 .arrow4{
-    position: absolute;
-    display: flex;
+
     width: 20px;
     height: 14px;
-    
-    margin-top: 316px;
-    margin-left: 390px; 
     object-fit: cover;
+    align-self: center;
 }
 
 @media screen and (min-width: 2000px) {
@@ -354,16 +308,139 @@
     .titleText{
         font-size: 28px;
     }
-    .firstFeature{
+    .features{
         justify-self: center;
     }
-    .secondFeature{
-        justify-self: center; 
+    .infoFirst{
+        width: 20%;
     }
-    .thirdFeature{
-        justify-self: center;
+    
+    .infoSecond{
+        width: 20%;
     }
-    .fourthFeature{
-        justify-self: center;
+    
+    .infoThird{
+        width: 20%;
+    }
+    
+    .infoFourth{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .features{
+        grid-template-columns: 1fr;
+        gap: 10%;
+        align-self: center;
+    }
+    
+    /*first*/
+    .image3{
+        height: 100px;
+    }
+    .rectangle1{
+        height: 300px;
+        width: 320px
+    }
+    .textFirst{
+        font-size: 10px;
+        align-self: center;
+    }
+    .titleFirst{
+        font-size: 20px;
+        align-self: center;
+    }
+    .learnMoreFirst{
+        font-size: 13px;
+    }
+    .learnMore1{
+        justify-content: space-between;
+        text-align: center;
+    }
+    .arrow1{
+        height: 10px;
+        width: 14px;
+    }
+
+    .image4{
+        height: 100px;
+    }
+    .rectangle2{
+        height: 300px;
+        width: 320px
+    }
+    .textSecond{
+        font-size: 10px;
+        align-self: center;
+    }
+    .titleSecond{
+        font-size: 20px;
+        align-self: center;
+    }
+    .learnMoreSecond{
+        font-size: 13px;
+    }
+    .learnMore2{
+        justify-content: space-between;
+        text-align: center;
+    }
+    .arrow2{
+        height: 10px;
+        width: 14px;
+    }
+
+    .image5{
+        height: 100px;
+    }
+    .rectangle3{
+        height: 300px;
+        width: 320px
+    }
+    .textThird{
+        font-size: 10px;
+        align-self: center;
+    }
+    .titleThird{
+        font-size: 20px;
+        align-self: center;
+    }
+    .learnMoreThird{
+        font-size: 13px;
+    }
+    .learnMore3{
+        justify-content: space-between;
+        text-align: center;
+    }
+    .arrow3{
+        height: 10px;
+        width: 14px;
+    }
+
+    .image6{
+        height: 100px;
+    }
+    .rectangle4{
+        height: 300px;
+        width: 320px
+    }
+    .textFourth{
+        font-size: 10px;
+        align-self: center;
+    }
+    .titleFourth{
+        font-size: 20px;
+        align-self: center;
+    }
+    .learnMoreFourth{
+        font-size: 13px;
+    }
+    .learnMore4{
+        justify-content: space-between;
+        text-align: center;
+    }
+    .arrow4{
+        height: 10px;
+        width: 14px;
     }
 }

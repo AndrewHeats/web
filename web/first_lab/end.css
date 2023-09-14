@@ -37,49 +37,57 @@ footer{
     width: 50%;
 }
 .buttons{
+    margin-top: 70px;
+    justify-content: flex-end;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-self: center;
+    flex-shrink: 0;
 }
-.learnMore{
-    padding: 20px 25px;
+.endLearnMoreButton{
+    display: flex;
+    width: 170px;
+    height: 60px;
+    justify-content: center;
+    align-content: center;
     border-radius: 50px;
     background: var(--4, #F063B8);
+    
+}
+.endLearnMoreText{
+    margin-top: 14px;
     color: #FFF;
-    text-align: center;
     font-family: Avenir;
     font-size: 18px;
     font-style: normal;
     font-weight: 900;
-
+    line-height: 160%;
 }
-.RequestDemo{
+.arrow5{
+    width: 20px;
+    height: 14px;
     align-self: center;
+}
+.endRequestDemoButton{
+    margin-left: 10%;
     display: flex;
+    justify-content: space-around;
+    width: 210px;
+    height: 60px;
+    flex-shrink: 0;
     border-radius: 50px;
     background: #FFF;
-    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.1);
-    justify-content: space-between;
-    align-content: center;
+    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
 }
-.text{
-    padding: 10px 15px;
 
+.endRequestDemoText{
     color: var(--2, #212353);
     font-family: Avenir;
     font-size: 16px;
     font-style: normal;
     font-weight: 900;
-    line-height: 160%; /* 25.6px */
+    line-height: 160%;
     letter-spacing: 0.08px;
-}
-.arrow5{
-    padding: 10px 15px;
-    width: 20px;
-    height: 14px;
-    align-self: center;
-
+    padding-top: 9%;
 }
 .message{
     bottom: 25px;
@@ -91,19 +99,14 @@ footer{
     .Copyright{
         font-size: 21px;
     }
+    .features{
+        justify-self: center;
+    }
     .footerTitle{
         font-size: 50px;
     }
     .Info{
         font-size: 23px;
-    }
-    .learnMore{
-        width: 12%;
-        font-size: 22px;
-    }
-    .RequestDemo{
-        width: 22%;
-        justify-content: space-around;
     }
     .text{
         font-size: larger;
@@ -111,6 +114,39 @@ footer{
     .message{
         height: 100px;
         width: 100px;
+    }
+    .message>circle:hover{
+        fill: #1504d7;
+    }
+    
+}
+
+@media screen and (max-width: 340px) {
+    .end{
+        margin-top: 60%;
+    }
+    footer{
+        grid-template-columns: 1fr;
+    }
+    .buttons{
+        height: 10%;
+        flex-direction: column;
+
+    }
+    .learnMore{
+        font-size: 10px;
+        align-self: center;
+    }
+    .RequestDemo{
+        height: 90px;
+        align-self: center;
+    }
+    .text{
+        font-size: 10px;
+    }
+    .message{
+        height: 30px;
+        width: 30px;
     }
     
 }

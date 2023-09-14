@@ -52,6 +52,9 @@
 }
 
 @media screen and (min-width:2000px){
+    .pinkMiddle{
+        width: 60%;
+    }
     .image2{
         width: 600px;
     }
@@ -60,5 +63,29 @@
     }
     .mainMiddleText{
         font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .image2{
+        display: none;
+    }
+    .mainMiddleText{
+        font-size: 20px;
+        width: 70%;
+        align-self: center;
+    }
+    .middleText{
+        font-size: 10px;
+        padding: 10px 15px;
+        width: 70%;
+    }
+    .pinkMiddle{
+        width: auto;
+    }
+    .textMiddleClass{
+        display: flex;
+        justify-content: center;
+        width: auto;
     }
 }

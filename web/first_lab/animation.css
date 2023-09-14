@@ -18,13 +18,6 @@
     color: #F063B8;
     transition: 0.8s;
 }
-
-.learnMoreButton:hover{
-    background: #FFF;
-    border: #9C69E2 solid 1px;
-    color: #9C69E2;
-    transition: 0.8s;
-}
 .learnMoreFirst:hover{
     color: #9C69E2;
     transition: 0.8s;
@@ -40,4 +33,27 @@
 .learnMoreFourth:hover{
     color: #9C69E2;
     transition: 0.8s;
+}
+.learnMoreButton:hover{
+    background: #FFF;
+    border: #9C69E2 solid 1px;
+    color: #9C69E2;
+    transition: 0.8s;
+}
+.endLearnMoreButton:hover{
+    background-color: #FFF;
+    transition: 0.8s;
+    border: #F063B8 solid 1px;
+}
+.endLearnMoreText:hover{
+    color: #F063B8;
+    transition: 0.8s;
+}
+.endRequestDemoText:hover{
+    color: #9C69E2;
+    transition: 0.8s;
+}
+.message:hover{
+    width: 100px;
+    height: 100px;
 }
