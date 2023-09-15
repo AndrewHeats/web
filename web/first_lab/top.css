@@ -170,6 +170,9 @@ header{
     .Greeting{
         display: contents;
     }
+    .Text{
+        width: 90%;
+    }
     .demoButton{
         margin-right: 0px;
     }
@@ -240,5 +243,8 @@ header{
         font-weight: 500;
         line-height: 160%;
         align-self: center;
+    }
+    .learnMoreButton{
+        max-width: 50%;
     }
 }

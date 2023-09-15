@@ -99,9 +99,6 @@ footer{
     .Copyright{
         font-size: 21px;
     }
-    .features{
-        justify-self: center;
-    }
     .footerTitle{
         font-size: 50px;
     }
@@ -123,23 +120,24 @@ footer{
 
 @media screen and (max-width: 340px) {
     .end{
-        margin-top: 60%;
+        margin-top: 200%;
     }
     footer{
         grid-template-columns: 1fr;
     }
     .buttons{
-        height: 10%;
         flex-direction: column;
-
+        flex-wrap: wrap;
+        align-content: flex-end;
+        gap: 20px;
     }
-    .learnMore{
+    .endlearnMoreButton{
         font-size: 10px;
         align-self: center;
     }
-    .RequestDemo{
-        height: 90px;
-        align-self: center;
+    .endRequestDemoButton{
+        align-self: flex-start;
+        right: 15%;
     }
     .text{
         font-size: 10px;
