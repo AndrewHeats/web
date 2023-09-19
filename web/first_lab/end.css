@@ -45,7 +45,7 @@ footer{
 }
 .endLearnMoreButton{
     display: flex;
-    width: 170px;
+    width: 210px;
     height: 60px;
     justify-content: center;
     align-content: center;
@@ -115,7 +115,9 @@ footer{
     .message>circle:hover{
         fill: #1504d7;
     }
-    
+    .buttons{
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -123,21 +125,27 @@ footer{
         margin-top: 200%;
     }
     footer{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
     .buttons{
         flex-direction: column;
         flex-wrap: wrap;
-        align-content: flex-end;
         gap: 20px;
+        margin: 0 auto;
+        margin-top: 10px;
     }
     .endlearnMoreButton{
         font-size: 10px;
         align-self: center;
+        width: 210px;
+        height: 60px;
+        margin-left: 30px;
     }
     .endRequestDemoButton{
         align-self: flex-start;
-        right: 15%;
+        margin-left: 0px;
     }
     .text{
         font-size: 10px;
@@ -145,6 +153,10 @@ footer{
     .message{
         height: 30px;
         width: 30px;
+    }
+    .Copyright{
+        padding: 0;
+        width: 100%;
     }
     
 }

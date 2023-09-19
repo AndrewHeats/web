@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 10%;
-    align-content: center;
+    justify-content: center;
 
 }
 .title{
@@ -40,8 +40,8 @@
 /*first*/
 
 .firstFeature{
-    position: relative;
     display: flex;
+    flex-direction: row;
 }
 .image3{
     align-self: center;
@@ -309,7 +309,7 @@
         font-size: 28px;
     }
     .features{
-        justify-self: center;
+        margin-left: 15%;
     }
     .infoFirst{
         width: 20%;
@@ -326,6 +326,22 @@
     .infoFourth{
         width: 20%;
     }
+    .image3{
+        align-self: center;
+        width: 15%;
+    }
+    .image4{
+        align-self: center;
+        width: 15%;
+    }
+    .image5{
+        align-self: center;
+        width: 15%;
+    }
+    .image6{
+        align-self: center;
+        width: 15%;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -336,14 +352,21 @@
     }
     .title{
         width: 90%;
+        margin: 0 auto;
     }
     /*first*/
     .image3{
+        margin-left: 33%;
+        width: 120px;
         height: 100px;
     }
     .rectangle1{
-        height: 300px;
-        width: 320px
+        margin-top: 29%;
+        width: 85%;
+        height: 60%;
+    }
+    .firstFeature{
+        display: block;
     }
     .textFirst{
         font-size: 10px;
@@ -366,11 +389,17 @@
     }
 
     .image4{
+        margin-left: 33%;
+        width: 120px;
         height: 100px;
     }
     .rectangle2{
-        height: 300px;
-        width: 320px
+        margin-top: 29%;
+        width: 85%;
+        height: 78%;
+    }
+    .secondFeature{
+        display: block;
     }
     .textSecond{
         font-size: 10px;
@@ -393,11 +422,17 @@
     }
 
     .image5{
+        margin-left: 33%;
+        width: 120px;
         height: 100px;
     }
     .rectangle3{
-        height: 300px;
-        width: 320px
+        margin-top: 29%;
+        width: 85%;
+        height: 78%;
+    }
+    .thirdFeature{
+        display: block;
     }
     .textThird{
         font-size: 10px;
@@ -420,11 +455,17 @@
     }
 
     .image6{
+        margin-left: 33%;
+        width: 120px;
         height: 100px;
     }
     .rectangle4{
-        height: 300px;
-        width: 320px
+        margin-top: 29%;
+        width: 85%;
+        height: 78%; 
+    }
+    .fourthFeature{
+        display: block;
     }
     .textFourth{
         font-size: 10px;
@@ -448,14 +489,18 @@
 
     .infoFirst{
         width: 50%;
+        margin: 0 auto;
     }
     .infoSecond{
         width: 50%;
+        margin: 0 auto;
     }
     .infoThird{
         width: 50%;
+        margin: 0 auto;
     }
     .infoFourth{
         width: 50%;
+        margin: 0 auto;
     }
 }

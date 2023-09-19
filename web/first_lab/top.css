@@ -42,6 +42,7 @@ header{
 }
 .demoButton{
     margin-right: 25%;
+    margin-left: 10%;
     align-self: center;
     display: flex;
     border-radius: 50px;
@@ -145,21 +146,37 @@ header{
 
 @media screen and (min-width: 2000px){
     .top{
-        margin-left: 20%;
+        margin-left: 15%;
+        width: 80%
     }
     .menuText{
-        font-size: larger;
+        font-size: 28px;
     }
     .Text{
         font-size: x-large;
     }
     .learnMoreButton{
-        width: 110px;
+        width: 220px;
     }
     .image1{
         margin-top: 6%;
     }
-    
+    .menuText1{
+        font-size: 28px;
+    }
+    .textInDemoButton{
+        font-size: 28px;
+        align-self: center;
+    }
+    .arrow{
+        align-self: center;
+        width: 33px;
+        height: 25px;
+    }
+    .demoButton{
+        height: 110px;
+        width: 300px;
+    }
 }
 
 
@@ -175,6 +192,7 @@ header{
     }
     .demoButton{
         margin-right: 0px;
+        margin-left:0px;
     }
     .burger__div{
         display: flex;
