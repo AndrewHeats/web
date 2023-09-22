@@ -181,6 +181,9 @@ header{
 
 
 @media screen and (max-width: 360px) {
+    .marker{
+        text-decoration: none;
+    }
     .image1{
         display: none;
     }
@@ -218,6 +221,7 @@ header{
     }
 
     .menu__box {
+    text-decoration: none;
     position: fixed;
     top: 0;
     left: 0;
