@@ -71,12 +71,12 @@ calculateButton.addEventListener("click", () => {
 });
 
 sortZoos.addEventListener("click", ()=>{
-  const sortedList = zoos.slice().sort((first, second) => {
-    return first.name.localeCompare(second.name);
+  zoos.sort((first, second) => {
+    return second.name.localeCompare(first.name);
   });
 
-  zoos = sortZoos
-  renderItemsList(zoos)
+  
+  renderItemsList(zoos);
 });
 
 
