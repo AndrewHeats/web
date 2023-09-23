@@ -12,6 +12,7 @@ const cancelFindButton = document.getElementById("cancel_find_button");
 const findInput = document.getElementById("find_input");
 const calculateButton = document.getElementById("calculate_button");
 const summaryArea = document.getElementById("summary_area");
+const sortZoos = document.getElementById("sort_button")
 
 let zoos = [];
 
@@ -66,11 +67,17 @@ cancelFindButton.addEventListener("click", () => {
 calculateButton.addEventListener("click", () => {
 
   const totalArea = zoos.reduce((total, zoo) => Number(total) + Number(zoo.area), 0);
-
- 
   summaryArea.textContent = `Summary Area: ${totalArea} square kilometers`;
 });
- 
+
+sortZoos.addEventListener("click", ()=>{
+  const sortedList = zoos.slice().sort((first, second) => {
+    return first.name.localeCompare(second.name);
+  });
+
+  zoos = sortZoos
+  renderItemsList(zoos)
+});
 
 
 
