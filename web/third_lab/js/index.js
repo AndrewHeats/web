@@ -10,6 +10,8 @@ const submitButton = document.getElementById("submit_button");
 const findButton = document.getElementById("find_button");
 const cancelFindButton = document.getElementById("cancel_find_button");
 const findInput = document.getElementById("find_input");
+const calculateButton = document.getElementById("calculate_button");
+const summaryArea = document.getElementById("summary_area");
 
 let zoos = [];
 
@@ -60,5 +62,16 @@ cancelFindButton.addEventListener("click", () => {
 
   findInput.value = "";
 });
+
+calculateButton.addEventListener("click", () => {
+
+  const totalArea = zoos.reduce((total, zoo) => Number(total) + Number(zoo.area), 0);
+
+ 
+  summaryArea.textContent = `Summary Area: ${totalArea} square kilometers`;
+});
+ 
+
+
 
 renderItemsList(zoos);

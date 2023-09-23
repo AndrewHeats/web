@@ -1,4 +1,3 @@
-
 const nameInput = document.getElementById("name_input");
 const locationInput = document.getElementById("location_input");
 const areaInput = document.getElementById("area_input");
@@ -16,9 +15,9 @@ const itemTemplate = ({ id, name, location, area, capacity }) => `
     class="item-container__image card-img-top" alt="card">
   <div class="card-body">
     <h5 class="card-title">${name}</h5>
-    <p class="card-text">${location}</p>
-    <p class="card-text">${area}</p>
-    <p class="card-text">${capacity}</p>
+    <p class="card-text">Locates in ${location}</p>
+    <p class="card-text">${area} km^2</p>
+    <p class="card-text">${capacity} animals</p>
   </div>
 </li>`;
 
@@ -38,12 +37,12 @@ export const addItemToPage = ({ id, name, location, area, capacity }) => {
 
   const element = document.getElementById(id);
 
-  
+
 };
 
 export const renderItemsList = (items) =>{
   itemsContainer.innerHTML="";
-  
+
   for (const item of items){
     addItemToPage(item);
   }
