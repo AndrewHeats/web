@@ -14,10 +14,11 @@ const itemTemplate = ({ id, name, location, area, capacity }) => `
     src="https://img.freepik.com/free-vector/group-wild-animals_1308-43813.jpg"
     class="item-container__image card-img-top" alt="card">
   <div class="card-body">
-    <h5 class="card-title">${name}</h5>
-    <p class="card-text">Locates in ${location}</p>
-    <p class="card-text">${area} km^2</p>
-    <p class="card-text">${capacity} animals</p>
+    <h5 class="card-name">${name}</h5>
+    <p class="card-location">Locates in ${location}</p>
+    <p class="card-area">${area} km^2</p>
+    <p class="card-capacity">${capacity} animals</p>
+    <button type="button" class="edit__button btn-primary" onclick="editZoo('${id}')">Edit</button>
   </div>
 </li>`;
 
