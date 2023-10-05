@@ -5,11 +5,16 @@ let showedlist = zoos;
 const saveZoo = () => {
   const zooList = document.getElementById("zoolist");
   const titleInput = document.getElementById("title__input").value;
-  const locationInput = parseFloat(document.getElementById("location__input").value);
+  const locationInput = document.getElementById("location__input").value;
   const areaInput = parseFloat(
     document.getElementById("area__input").value
   );
   const capacityInput = document.getElementById("capacity__input").value;
+
+  if (areaInput === 0) {
+    alert("Area cannot be 0. Please enter a valid value.");
+    return; // Exit the function if area is 0
+  }
 
   const zoo = {
     title: titleInput,
@@ -17,7 +22,6 @@ const saveZoo = () => {
     area: areaInput,
     capacity: capacityInput,
   };
-
   zoos.push(zoo);
   const zooItem = document.createElement("div");
   zooItem.classList.add("zoo-item");
@@ -28,7 +32,6 @@ const saveZoo = () => {
         <h2 class="card__zoo__location">Zoo location: ${zoo.location}</h2>
         <h2 class="card__zoo__area">Zoo area: ${zoo.area}</h2>
         <h2 class="card__zoo__capacity">Zoo capacity: ${zoo.capacity}</h2>
-        <button type="button" class="delete__button" onclick="deleteZoo(this.parentElement)">Delete</button>
         <button type="button" class="edit__button" onclick="editZoo(this.parentElement)">Edit</button>
       </div>
     `;
@@ -37,20 +40,19 @@ const saveZoo = () => {
   showedlist = zoos;
 };
 
-function display(zoo) {
+function display(zoos) {
   const zooList = document.getElementById("zoolist");
   zooList.innerHTML = "";
-  zoo.forEach((item) => {
+  zoos.forEach((item) => {
     const zooItem = document.createElement("div");
     zooItem.classList.add("zoo-item");
     zooItem.innerHTML = `
     <div class="card__body">
       <img src="./zoo.jpeg" >
-      <h1 class="card__title">${zoo.title}</h1>
-      <h2 class="card__zoo__location">Zoo location: ${zoo.location}</h2>
-      <h2 class="card__zoo__area">Zoo area: ${zoo.area}</h2>
-      <h2 class="card__zoo__capacity">Zoo capacity: ${zoo.capacity}</h2>
-      <button type="button" class="delete__button" onclick="deleteZoo(this.parentElement)">Delete</button>
+      <h1 class="card__title">${item.title}</h1>
+      <h2 class="card__zoo__location">Zoo location: ${item.location}</h2>
+      <h2 class="card__zoo__area">Zoo area: ${item.area}</h2>
+      <h2 class="card__zoo__capacity">Zoo capacity: ${item.capacity}</h2>
       <button type="button" class="edit__button" onclick="editZoo(this.parentElement)">Edit</button>
     </div>
   `;
@@ -62,25 +64,25 @@ function deleteZoo(element) {
   const titleInput = element.querySelector(".card__title");
   const title = titleInput.textContent;
   const locationInput = element.querySelector(".card__zoo__location");
-  const location = locationInput.textContent.split(": ");
+  const location = locationInput.textContent;
   const areaInput = element.querySelector(".card__zoo__area");
   const area = areaInput.textContent.split(": ");
   zoos.forEach((zoo, index) => {
     console.log(
       zoo.title === title &&
-        zoo.location === parseFloat(location[1]) &&
+        zoo.location === location &&
         zoo.area === parseFloat(area[1])
     );
     if (
       zoo.title === title &&
-      zoo.location === parseFloat(location[1]) &&
+      zoo.location === location &&
       zoo.area === parseFloat(area[1])
     ) {
       zoos.splice(index, 1);
       element.remove();
     }
   });
-  TotalByPrice(zoos);
+  TotalByArea();
 }
 
 

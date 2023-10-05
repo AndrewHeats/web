@@ -16,13 +16,13 @@
             <li tabindex="0" class="nav__button"><a>Create zoo</a></li>
             <li tabindex="0" class="nav__button"><a >Edit zoo</a></li>
             <div tabindex="0" class="nav__button "><a id = "total__area">Total Area: 0</a></div>
-            <button tabindex="0" class="nav__button" onclick="SortZoos(showedlist)">Sort zoos by name</button>
+            <button tabindex="0" class="nav__button" onclick="SortZoos()">Sort zoos by area</button>
             <button tabindex="0" class="nav__button" onclick="restore()">Restore</button>
 
         </ul>
         <form id="find">
             <input type="text" name="query" id="find__title">
-            <button type="button" onclick="FindZoos()">Find</button>
+            <button type="button" onclick="SearchZoos()">Find</button>
         </form>
     </nav>
     <div id="container">
@@ -64,7 +64,7 @@
                     <label for="capacity__input__edit" class="edit__form">New capacity</label>
                     <input type="number" id="capacity__input__edit" class="input__form">
                 </div>
-                <button id="submit__button" type="submit" class="submit__button" onclick="saveEdit()">Submit</button>
+                <button id="submit__edit__button" type="submit" class="submit__button" onclick="saveEdit()">Submit</button>
                 <button id="cancel__button" type="submit" class="submit__button" onclick="cancelEdit()">Cancel</button>
             </div>
         </form>

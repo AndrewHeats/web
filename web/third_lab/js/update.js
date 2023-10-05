@@ -45,17 +45,17 @@ const saveEdit = () => {
   for (let i = 0; i < zoos.length; i++) {
     if (
       zoos[i].title === title &&
-      zoos[i].location === parseFloat(location[1]) &&
+      zoos[i].location === location &&
       zoos[i].area === parseFloat(area[1])
     ) {
       zoos[i].title = titleUpdated;
-      zoos[i].location = parseFloat(locationUpdated);
+      zoos[i].location = locationUpdated;
       zoos[i].area = parseFloat(areaUpdated);
       zoos[i].capacity = capacityUpdated;
     }
   }
   edit.classList.add(HIDE_CLASSNAME);
-  TotalByPrice(zoos);
+  TotalByArea();
 };
 const cancelEdit = () => {
     edit.classList.add(HIDE_CLASSNAME);

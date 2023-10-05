@@ -5,37 +5,35 @@ const capacityInput = document.getElementById("capacity__input");
 const submitButton = document.getElementById("submit__button");
 const zooForm = document.getElementById("zooform");
 
-function checkForUnique() {
-  const isUnique = !zoos.some((zoo) => {
-    return (
-      zoo.title === titleInput.value &&
-      zoo.location === parseFloat(locationInput.value) &&
-      zoo.area === parseFloat(areaInput.value) &&
-      zoo.capacity === capacityInput.value
-    );
-  });
-  return isUnique;
+function checkForArea(areaValue) {
+  return areaValue !== 0;
 }
 
-zooForm.addEventListener("submit", function (event) {
+const editButton = document.getElementById("submit__edit__button");
+editButton.addEventListener("click", function(event){
+  event.preventDefault();
+});
+
+submitButton.addEventListener("click", function(event){
   event.preventDefault();
 });
 
 function checkFields() {
   const titleValue = titleInput.value.trim();
   const locationValue = locationInput.value.trim();
-  const areaValue = areaInput.value.trim();
+  const areaValue = parseInt(areaInput.value.trim()); 
   const capacityValue = capacityInput.value.trim();
-  return titleValue && locationValue && areaValue && capacityValue;
+  return titleValue && locationValue && checkForArea(areaValue) && capacityValue;
 }
 
-const findButton = document.getElementById("submit__button");
-findButton.addEventListener("click", function (event) {
+
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  const areaValue = parseInt(areaInput.value.trim()); // Parse the input as an integer
+
   if (checkFields()) {
-    if (checkForUnique()) {
-      saveBike();
-    } else {
-      alert("This zoo is on list try change some information");
-    }
+
+  } else {
+    alert("Please fill in all fields and ensure the area is not 0.");
   }
 });
