@@ -1,4 +1,4 @@
-function SortZoos() {
+function SortZoos(zoos) {
   const zoosList = document.getElementById("zoolist");
   zoosList.innerHTML = "";
   zoos.sort((a, b) => a.area - b.area);

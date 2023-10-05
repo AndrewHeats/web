@@ -36,8 +36,13 @@ const saveZoo = () => {
       </div>
     `;
   zooList.appendChild(zooItem);
-  TotalByArea(zoos);
+  TotalByArea();
   showedlist = zoos;
+
+  titleInput.value = "";
+  locationInput.value = "";
+  areaInput.value = "";
+  capacityInput.value = "";
 };
 
 function display(zoos) {

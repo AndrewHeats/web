@@ -45,7 +45,7 @@ const saveEdit = () => {
   for (let i = 0; i < zoos.length; i++) {
     if (
       zoos[i].title === title &&
-      zoos[i].location === location &&
+      zoos[i].location === location[1] &&
       zoos[i].area === parseFloat(area[1])
     ) {
       zoos[i].title = titleUpdated;
