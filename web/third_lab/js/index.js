@@ -29,11 +29,4 @@ function checkFields() {
 
 submitButton.addEventListener("click", function (event) {
   event.preventDefault();
-  const areaValue = parseInt(areaInput.value.trim()); // Parse the input as an integer
-
-  if (checkFields()) {
-
-  } else {
-    alert("Please fill in all fields and ensure the area is not 0.");
-  }
 });

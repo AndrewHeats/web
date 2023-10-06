@@ -1,8 +1,8 @@
-function SortZoos(zoos) {
+function SortZoos(list) {
   const zoosList = document.getElementById("zoolist");
   zoosList.innerHTML = "";
-  zoos.sort((a, b) => a.area - b.area);
-  zoos.forEach((zoo) => {
+  list.sort((a, b) => a.area - b.area);
+  list.forEach((zoo) => {
     const zooItem = document.createElement("div");
     zooItem.classList.add("zoo-item");
     zooItem.innerHTML = `
@@ -18,13 +18,13 @@ function SortZoos(zoos) {
 
     zoosList.appendChild(zooItem);
   });
-  TotalByArea();
-  console.log(zoosList)
+  TotalByArea(list);
+  console.log(showedlist);
+  console.log(list);
 }
 
-function TotalByArea() {
-  const totalArea = 0
-  const Area = zoos.reduce((totalArea, zoo) => totalArea + zoo.area, 0);
+function TotalByArea(zoos) {
+  const totalArea = zoos.reduce((totalArea, zoo) => totalArea + zoo.area, 0);
   console.log(totalArea);
   const totalAreaElement = document.getElementById("total__area");
   totalAreaElement.textContent = `Total Area: ${totalArea}`;
@@ -35,13 +35,13 @@ function SearchZoos() {
   const findZoo = document
     .getElementById("find__title")
     .value.toLowerCase();
-  const find_zoos = zoos;
-  const result = zoos.filter((zoo) => {
+  const result = showedlist.filter((zoo) => {
     return zoo.title.toLowerCase().includes(findZoo);
   });
-  display(result);
-  TotalByArea(result);
   showedlist = result;
+  display(showedlist);
+  console.log(showedlist);
+  TotalByArea(showedlist);
 }
 
 function restore(){

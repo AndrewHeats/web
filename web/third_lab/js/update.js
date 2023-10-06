@@ -37,6 +37,11 @@ const saveEdit = () => {
   const location = locationElement.textContent.split(": ");
   const area = areaElement.textContent.split(": ");
 
+  if (areaUpdated <= 0 || locationUpdated==='' || titleUpdated === '' || capacityUpdated === '' || capacityUpdated === '0') {
+    alert("Please fill in all fields and ensure the area is not 0.");
+    return; // Exit the function if area is 0
+  }
+
   titleElement.textContent = titleUpdated;
   locationElement.textContent = "Zoo location: " + locationUpdated;
   areaElement.textContent = "Zoo area: " + areaUpdated;
@@ -55,7 +60,7 @@ const saveEdit = () => {
     }
   }
   edit.classList.add(HIDE_CLASSNAME);
-  TotalByArea();
+  TotalByArea(zoos);
 };
 const cancelEdit = () => {
     edit.classList.add(HIDE_CLASSNAME);

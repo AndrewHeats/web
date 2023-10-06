@@ -11,8 +11,8 @@ const saveZoo = () => {
   );
   const capacityInput = document.getElementById("capacity__input").value;
 
-  if (areaInput === 0) {
-    alert("Area cannot be 0. Please enter a valid value.");
+  if (areaInput <= 0 || locationInput ==='' || titleInput === '' || capacityInput === '' || capacityInput === '0') {
+    alert("Please fill in all fields and ensure the area is not 0.");
     return; // Exit the function if area is 0
   }
 
@@ -36,13 +36,15 @@ const saveZoo = () => {
       </div>
     `;
   zooList.appendChild(zooItem);
-  TotalByArea();
+  TotalByArea(zoos);
   showedlist = zoos;
 
   titleInput.value = "";
   locationInput.value = "";
   areaInput.value = "";
   capacityInput.value = "";
+
+  restore();
 };
 
 function display(zoos) {
@@ -87,7 +89,7 @@ function deleteZoo(element) {
       element.remove();
     }
   });
-  TotalByArea();
+  TotalByArea(zoos);
 }
 
 
