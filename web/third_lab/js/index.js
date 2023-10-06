@@ -1,84 +1,32 @@
-import {
-  addItemToPage,
-  clearInputs,
-  getInputValues,
-  renderItemsList,
-} from "./dom_util.js";
+const titleInput = document.getElementById("title__input");
+const locationInput = document.getElementById("location__input");
+const areaInput = document.getElementById("area__input");
+const capacityInput = document.getElementById("capacity__input");
+const submitButton = document.getElementById("submit__button");
+const zooForm = document.getElementById("zooform");
 
+function checkForArea(areaValue) {
+  return areaValue !== 0;
+}
 
-const submitButton = document.getElementById("submit_button");
-const findButton = document.getElementById("find_button");
-const cancelFindButton = document.getElementById("cancel_find_button");
-const findInput = document.getElementById("find_input");
-const calculateButton = document.getElementById("calculate_button");
-const summaryArea = document.getElementById("summary_area");
-const sortZoos = document.getElementById("sort_button")
+const editButton = document.getElementById("submit__edit__button");
+editButton.addEventListener("click", function(event){
+  event.preventDefault();
+});
 
-let zoos = [];
+submitButton.addEventListener("click", function(event){
+  event.preventDefault();
+});
 
-const addItem = ({name, location, area, capacity}) => {
-  const generatedId = uuid.v1();
-
-  const newItem = {
-    id: generatedId,
-    name,
-    location,
-    area,
-    capacity,
-  };
-
-  zoos.push(newItem);
-
-  addItemToPage(newItem);
+function checkFields() {
+  const titleValue = titleInput.value.trim();
+  const locationValue = locationInput.value.trim();
+  const areaValue = parseInt(areaInput.value.trim()); 
+  const capacityValue = capacityInput.value.trim();
+  return titleValue && locationValue && checkForArea(areaValue) && capacityValue;
 }
 
 
-
-submitButton.addEventListener("click", (event) => {
-  // Prevents default page reload on submit
+submitButton.addEventListener("click", function (event) {
   event.preventDefault();
-
-  const { name, location, area, capacity } = getInputValues();
-
-  clearInputs();
-
-  addItem({
-    name,
-    location,
-    area,
-    capacity,
-  });
 });
-
-findButton.addEventListener("click", () => {
-  const foundZoos = zoos.filter(
-    (zoo) => zoo.name.search(findInput.value) !== -1
-  );
-
-  renderItemsList(foundZoos)
-});
-
-cancelFindButton.addEventListener("click", () => {
-  renderItemsList(zoos);
-
-  findInput.value = "";
-});
-
-calculateButton.addEventListener("click", () => {
-
-  const totalArea = zoos.reduce((total, zoo) => Number(total) + Number(zoo.area), 0);
-  summaryArea.textContent = `Summary Area: ${totalArea} square kilometers`;
-});
-
-sortZoos.addEventListener("click", ()=>{
-  zoos.sort((first, second) => {
-    return second.name.localeCompare(first.name);
-  });
-
-  
-  renderItemsList(zoos);
-});
-
-
-
-renderItemsList(zoos);
