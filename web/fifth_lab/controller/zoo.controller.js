@@ -1,0 +1,50 @@
+const db = require("../db");
+
+class ZooController{
+    async createZoo(req, res) {
+        const {name, location, area, capacity} = req.body;
+        const newZoo = await db.query(
+            `INSERT INTO zoo (name, location, area, capacity) VALUES
+            ($1, $2, $3, $4) RETURNING *`, [name, location, area, capacity]
+
+        );
+        res.json(newZoo.rows[0])
+    }
+    async getAllZoo(req, res) {
+        const allZoos = await db.query(`SELECT * FROM zoo`);
+        res.json(allZoos.rows);
+    }
+
+    async getOneZoo(req, res){
+        const id = req.params.id;
+        const oneZoo = await db.query(
+            `SELECT * FROM zoo WHERE zoo.id=$1`,
+            [id]
+        );
+        res.json(oneZoo.rows[0]);
+    }
+    async getSortedZoo(req, res){
+        const sortedZoos = await db.query(
+            `SELECT * FROM zoo ORDER BY area `
+        );
+        res.json(sortedZoos.rows)
+    }
+    async updateZoo(req, res){
+        const {id,name, location, area, capacity} = req.body;
+        const updateZoo = await db.query(
+            `UPDATE zoo SET name = $1, location = $2, area = $3, capacity = $4 WHERE id= $5 RETURNING *`,
+            [name, location, area, capacity, id]
+        );
+        res.json(updateZoo.rows[0]);
+    }
+    async deleteZoo(req, res){
+        const id = req.params.id;
+        const deleteZoo = await db.query(
+            `DELETE FROM zoo WHERE zoo.id = $1`,
+            [id]
+        );
+        res.json(deleteZoo.rows[0]);
+    }
+}
+
+module.exports = new ZooController();    
