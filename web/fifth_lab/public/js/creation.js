@@ -6,7 +6,8 @@ const displayAllZoos = async () =>{
   const allZoos = await getAllZoos();
   zoos = allZoos;
   showedlist = zoos;
-  display(zoos);
+  console.log(zoos)
+    display(zoos);
   TotalByArea(showedlist);
 }
 
@@ -26,11 +27,12 @@ const saveZoo = () => {
   }
 
   const zoo = {
-    title: titleInput,
+    name: titleInput,
     location: locationInput,
     area: areaInput,
     capacity: capacityInput,
   };
+  console.log(zoo)
   postZoo(zoo).then(displayAllZoos);
   showedlist = zoos;
   TotalByArea(showedlist);
@@ -46,6 +48,5 @@ function zooDelete(zooId){
   deleteZoo(zooId).then(displayAllZoos);
   TotalByArea(showedlist);
 }
-
 displayAllZoos();
 
