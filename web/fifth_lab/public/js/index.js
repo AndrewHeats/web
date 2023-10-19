@@ -14,6 +14,10 @@ editButton.addEventListener("click", function(event){
   event.preventDefault();
 });
 
+zooForm.addEventListener("submit", function (event){
+  event.preventDefault();
+});
+
 submitButton.addEventListener("click", function(event){
   event.preventDefault();
 });
@@ -27,6 +31,3 @@ function checkFields() {
 }
 
 
-submitButton.addEventListener("click", function (event) {
-  event.preventDefault();
-});
