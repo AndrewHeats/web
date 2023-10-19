@@ -7,7 +7,7 @@ const displayAllZoos = async () =>{
   zoos = allZoos;
   showedlist = zoos;
   console.log(zoos)
-    display(zoos);
+  display(zoos);
   TotalByArea(showedlist);
 }
 
@@ -33,7 +33,14 @@ const saveZoo = () => {
     capacity: capacityInput,
   };
   console.log(zoo)
-  postZoo(zoo).then(displayAllZoos);
+  postZoo(zoo).then((allZoos)=>{
+    zoos = allZoos;
+    showedlist = zoos;
+    console.log(allZoos)
+    display(zoos);
+    TotalByArea(showedlist);
+  });
+  display(zoos);
   showedlist = zoos;
   TotalByArea(showedlist);
 

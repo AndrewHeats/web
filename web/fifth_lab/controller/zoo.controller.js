@@ -5,10 +5,11 @@ class ZooController{
         const {name, location, area, capacity} = req.body;
         const newZoo = await db.query(
             `INSERT INTO zoo (name, location, area, capacity) VALUES
-            ($1, $2, $3, $4) RETURNING *`, [name, location, area, capacity]
+            ($1, $2, $3, $4)`, [name, location, area, capacity]
 
         );
-        res.json(newZoo.rows[0])
+        const responce = await db.query(`SELECT * FROM zoo`);
+        res.json(responce.rows)
     }
     async getAllZoo(req, res) {
         const allZoos = await db.query(`SELECT * FROM zoo`);
