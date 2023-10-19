@@ -12,7 +12,7 @@ function display(zoos) {
       <h2 class="card__zoo__location">Zoo location: ${item.location}</h2>
       <h2 class="card__zoo__area">Zoo area: ${item.area}</h2>
       <h2 class="card__zoo__capacity">Zoo capacity: ${item.capacity}</h2>
-      <button type="button" class="edit__button" onclick="editZoo(this.parentElement)">Edit</button>
+      <button type="button" class="edit__button" onclick="startEdit(${item.id})">Edit</button>
     </div>
   `;
     zooList.appendChild(zooItem);

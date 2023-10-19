@@ -4,17 +4,18 @@ const cors = require('cors');
 const app = express();
 
 
-app.use(cors({
-    origin: 'http://127.0.0.1:5500',
-    methods: 'GET,POST',  // Adjust the methods you need
-    allowedHeaders: ['Content-Type']  // Add any other required headers here
-  }));
+
   
 app.use(express.static("public"));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     next();
   });
+app.use(cors({
+  origin: 'http://127.0.0.1:5500',
+  methods: 'POST,PUT,GET,OPTIONS',  // Allow the specified methods
+  allowedHeaders: ['Content-Type']  // Add any other required headers here
+}));
 app.use("/css", express.static(__dirname + "public/css"));
 app.use("/js", express.static(__dirname + "public/js"));
 app.use(express.json());

@@ -18,7 +18,6 @@ const saveEdit = () => {
   const locationUpdated = document.getElementById("location__input__edit").value;
   const areaUpdated = document.getElementById("area__input__edit").value;
   const capacityUpdated = document.getElementById("capacity__input__edit").value;
-
   if (areaUpdated <= 0 || locationUpdated==='' || titleUpdated === '' || capacityUpdated === '' || capacityUpdated === '0') {
     alert("Please fill in all fields and ensure the area is not 0.");
     return; // Exit the function if area is 0
@@ -30,6 +29,8 @@ const saveEdit = () => {
     area: areaUpdated,
     capacity: capacityUpdated 
   };
+  console.log()
+
   editZoo(zoo).then(displayAllZoos);
   edit.classList.add(HIDE_CLASSNAME);
 };
