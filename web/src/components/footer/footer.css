@@ -1,0 +1,54 @@
+/* styles.css - External CSS file */
+
+.boxer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: #fff;
+    border: #333 solid 0.2rem;
+    margin-top: 7rem;
+  }
+  
+  .boxer img {
+    height: 8rem;
+  }
+  
+  .boxer__text {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border-bottom: #050a18 0.2rem solid;
+    justify-content: space-between;
+  }
+  
+  .text {
+    text-align: left;
+    margin: 1rem 0;
+    width: 30%;
+  }
+  
+  h4 {
+    font-size: 2rem;
+    color: #0b0404;
+    margin: 0;
+  }
+  
+  p {
+    color: #231d1d;
+    margin: 0;
+  }
+  
+  .boxer__copyright {
+    text-align: center;
+    padding-top: 1rem;
+    color: #0b0404;
+  }
+  
+  .logo {
+    height: 8rem;
+    width: 8rem;
+  }
+  
