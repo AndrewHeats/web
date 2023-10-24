@@ -20,6 +20,8 @@
 ### Лабораторна робота №5 (Варіант 9)
 Посилання на вітку (https://github.com/AndrewHeats/web/tree/fifth_lab)
 ***
+
 ### Лабораторна робота №6 (Варіант 9)
 Посилання на вітку (https://github.com/AndrewHeats/web/tree/sixth_lab)
 ***
+
