@@ -1,5 +1,3 @@
-
-
 import Info from '../../components/info/info'
 import '../../components/info/info.css'
 import Zoos from '../../components/zoos/zoos'

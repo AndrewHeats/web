@@ -11,7 +11,7 @@ function Footer(){
                 <img src="https://as2.ftcdn.net/v2/jpg/02/85/44/69/1000_F_285446979_Z8F7AKf7SImSo83AfpjauCYWka9cFfhf.jpg"className="media"></img>
             </div>
             <div className="boxer__copyright">
-                <p className="copyrightText">2020 IoT © Copyright all rights reserved, bla bla</p>
+                <p className="copyrightText">2023 IoT © Copyright all rights reserved</p>
             </div>
         </div>
     );
