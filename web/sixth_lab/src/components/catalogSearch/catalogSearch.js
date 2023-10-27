@@ -1,6 +1,6 @@
 const CatalogSearch = () => {
     return (
-      <div class="wrapper">
+      <div class="filterwrapper">
         <div class="inner">
           <div class="filter-options">
             <div class="dropdown">
