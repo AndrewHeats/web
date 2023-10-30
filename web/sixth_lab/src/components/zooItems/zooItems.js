@@ -6,6 +6,7 @@ import DefaultZoo from "./defaultZoo";
 const ZooItems = ({ data = [] }) => {
   return (
     <div className="wrapper">
+      <div className="inner">
       {data.map(({ id, name, price, area, location, imageSrc }, idx) => (
         <DefaultZoo
           id={id}
@@ -16,6 +17,7 @@ const ZooItems = ({ data = [] }) => {
           imageSrc={imageSrc}
         />
       ))}
+     </div>
     </div>
   );
 };

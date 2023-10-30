@@ -13,7 +13,7 @@ const DefaultZoo = ({
   return (
     <div className="container">
         <div class="zoo-item">
-            <img src={imageSrc} className="zoo-image"/>
+            <img src={imageSrc} className="zoo-image" alt="zoo"/>
             <h2 className="zoo-name">{name}</h2>
             <h6 className="zoo-text">Area: <text>{area} square kilometers</text></h6>
             <h6 className="zoo-text">location: <text>{location}</text></h6>
