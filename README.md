@@ -25,3 +25,6 @@
 Посилання на вітку (https://github.com/AndrewHeats/web/tree/sixth_lab)
 ***
 
+### Лабораторна робота №7 (Варіант 9)
+Посилання на вітку (https://github.com/AndrewHeats/web/tree/seventh_lab)
+***
