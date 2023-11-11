@@ -1,0 +1,51 @@
+
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .zoo-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .zoo-image {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    margin: 10px 0;
+    border: #333 1px solid;
+  }
+  
+  .zoo-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .zoo-text {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #1d1d1d;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(51, 51, 53);
+    border: #1d1d1d 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 400;
+    margin-top: 40px;
+    width: 30%;
+    
+  }
+
+  
+  

@@ -1,0 +1,11 @@
+.inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
