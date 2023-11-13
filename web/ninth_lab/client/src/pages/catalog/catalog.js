@@ -14,6 +14,7 @@ import zoo4 from "./zoosPhoto/Zoo4.png";
 import zoo5 from "./zoosPhoto/Zoo5.png";
 import zoo6 from "./zoosPhoto/Zoo6.png";
 import zoo7 from "./zoosPhoto/Zoo7.png";
+import axios from "axios";
 
 const zoodata = [
   {
@@ -95,8 +96,9 @@ function Catalog() {
   
     useEffect(() => {
       setLoading(true);
-      getZooList(filterCondition)
+      axios.get("http://127.0.0.1:5500/api/zoo")
         .then((response) => {
+          console.log(response.data)
           setBackendData(response.data);
           setLoading(false);
         })
@@ -146,7 +148,7 @@ function Catalog() {
         {loading ? (
           <Loading />
         ) : (
-          <ZooItems data={zoodata} filterCondition={filterCondition} />
+          <ZooItems data={zooListData} filterCondition={filterCondition} />
         )}
       </div>
     );
