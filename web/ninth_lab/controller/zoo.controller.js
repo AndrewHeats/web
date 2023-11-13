@@ -11,10 +11,43 @@ class ZooController{
         const responce = await db.query(`SELECT * FROM zoo`);
         res.json(responce.rows)
     }
+    // async getAllZoo(req, res) {
+    //     const allZoos = await db.query(`SELECT * FROM zoo`);
+    //     res.json(allZoos.rows);
+    // }
     async getAllZoo(req, res) {
-        const allZoos = await db.query(`SELECT * FROM zoo`);
-        res.json(allZoos.rows);
-    }
+        try {
+          const { minArea, maxArea, sortBy, searchInput } = req.query;
+          let query = "SELECT * FROM zoo";
+          if (minArea !== "" || maxArea !== "" || searchInput !== "") {
+            query += " WHERE ";
+    
+            query +=
+              minArea !== ""
+                ? ` area >= ${parseFloat(minArea)} `
+                : " area >= 0 ";
+    
+            query += " AND ";
+    
+            query +=
+              maxArea !== ""
+                ? ` area <= ${parseFloat(maxArea)} `
+                : ` area <= ${Number.MAX_SAFE_INTEGER} `;
+    
+            query += ` AND LOWER(name) LIKE LOWER('%${searchInput}%') `;
+          }
+    
+          if (sortBy !== "") {
+            query += ` ORDER BY ${sortBy}`;
+          }
+    
+          const filteredAndSortedZoos = await db.query(query);
+          res.status(200).json(filteredAndSortedZoos.rows);
+        } catch (error) {
+          console.error("Помилка при отриманні зоопарків:", error);
+          res.status(500).json({ error: "Помилка при отриманні зоопарків" });
+        }
+      }
 
     async getOneZoo(req, res){
         const id = req.params.id;

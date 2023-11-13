@@ -92,11 +92,12 @@ function Catalog() {
       minArea: "",
       maxArea: "",
       sortBy: "",
+      searchInput: "",
     });
   
     useEffect(() => {
       setLoading(true);
-      axios.get("http://127.0.0.1:5500/api/zoo")
+      getZooList(filterCondition)
         .then((response) => {
           console.log(response.data)
           setBackendData(response.data);
@@ -134,11 +135,12 @@ function Catalog() {
     }, [filterCondition]);
     
   
-    const applyFilter = (minArea, maxArea, sortBy) => {
+    const applyFilter = (minArea, maxArea, sortBy, searchInput) => {
       setFilterCondition({
         minArea,
         maxArea,
         sortBy,
+        searchInput,
       });
     };
   

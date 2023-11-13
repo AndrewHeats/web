@@ -42,6 +42,16 @@ const CatalogSearch = ({ applyFilter }) => {
               name="maxArea"
               value={maxArea}
               onChange={(e) => setMaxArea(e.target.value)}  />
+          <label>
+            Search
+            <input
+              type="text"
+              name="searchInput"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              placeholder="Type something..."
+            />
+          </label>
           </div>
           <button class="apply-button" onClick={handleApplyClick}>Apply</button>
         </div>

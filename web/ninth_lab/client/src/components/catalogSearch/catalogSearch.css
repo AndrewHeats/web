@@ -26,6 +26,8 @@
 label {
   margin-right: 10px;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
 }
 
 #filter {

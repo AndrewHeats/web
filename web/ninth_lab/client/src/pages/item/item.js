@@ -4,6 +4,7 @@ import { getDetailedZooInfo } from "../../fetching";
 import { useParams } from "react-router-dom";
 import Loading from "../../components/loading/Loading";
 import { NavLink } from "react-router-dom";
+import "./item.css"
 
 const ZooViewMore = () => {
   const { id } = useParams();
@@ -30,15 +31,14 @@ const ZooViewMore = () => {
       {loading ? (
         <Loading />
       ) : (
-      <div className="wrapper">
-        <div className="inner">
-          {/* <img src={} alt="zoo" /> */}
-          <div className="box">
-            <h2>{zooData.name}</h2>
-            <p2>{zooData.area} $</p2>
-            <p1>{zooData.location}</p1>
-            <h3>Additional info:</h3>
-            <p>&nbsp;&nbsp;&nbsp; Price of zoo: {zooData.price} $</p>
+      <div className="item_wrapper">
+        <div className="item_inner">
+          <div className="item_box">
+            <h2 className="name">{zooData.name}</h2>
+            <h3 className="info">Additional info:</h3>
+            <p className="area">Area of zoo: {zooData.area} $</p>
+            <p className="location">Location of zoo: {zooData.location}</p>
+            <p className="price">Price of zoo: {zooData.price} $</p>
             <div className="button_list">
               <NavLink to="/Catalog">Go back</NavLink>
               <button>Add to cart</button>
