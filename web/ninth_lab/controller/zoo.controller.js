@@ -16,38 +16,40 @@ class ZooController{
     //     res.json(allZoos.rows);
     // }
     async getAllZoo(req, res) {
-        try {
+      try {
           const { minArea, maxArea, sortBy, searchInput } = req.query;
-          let query = "SELECT * FROM zoo";
-          if (minArea !== "" || maxArea !== "" || searchInput !== "") {
-            query += " WHERE ";
-    
-            query +=
-              minArea !== ""
-                ? ` area >= ${parseFloat(minArea)} `
-                : " area >= 0 ";
-    
-            query += " AND ";
-    
-            query +=
-              maxArea !== ""
-                ? ` area <= ${parseFloat(maxArea)} `
-                : ` area <= ${Number.MAX_SAFE_INTEGER} `;
-    
-            query += ` AND LOWER(name) LIKE LOWER('%${searchInput}%') `;
+          let query = "SELECT * FROM zoo WHERE";
+  
+          if (minArea !== "") {
+              query += ` area >= ${parseFloat(minArea)}`;
+          } else {
+              query += " area >= 0";
           }
-    
+  
+          query += " AND";
+  
+          if (maxArea !== "") {
+              query += ` area <= ${parseFloat(maxArea)}`;
+          } else {
+              query += ` area <= ${Number.MAX_SAFE_INTEGER}`;
+          }
+  
+          if (searchInput !== "") {
+              query += ` AND LOWER(name) LIKE LOWER('%${searchInput}%')`;
+          }
+  
           if (sortBy !== "") {
-            query += ` ORDER BY ${sortBy}`;
+              query += ` ORDER BY ${sortBy}`;
           }
-    
+  
           const filteredAndSortedZoos = await db.query(query);
           res.status(200).json(filteredAndSortedZoos.rows);
-        } catch (error) {
+      } catch (error) {
           console.error("Помилка при отриманні зоопарків:", error);
           res.status(500).json({ error: "Помилка при отриманні зоопарків" });
-        }
       }
+  }
+  
 
     async getOneZoo(req, res){
         const id = req.params.id;
@@ -57,12 +59,17 @@ class ZooController{
         );
         res.json(oneZoo.rows[0]);
     }
+    async getAllTypesOfZoo(req, res) {
+      const typesOfZoo = await db.query(`SELECT * FROM zooTypes`);
+      res.json(typesOfZoo.rows);
+    }
     async getSortedZoo(req, res){
         const sortedZoos = await db.query(
             `SELECT * FROM zoo ORDER BY area `
         );
         res.json(sortedZoos.rows)
     }
+
     async updateZoo(req, res){
         const {id,name, location, area, capacity} = req.body;
         const updateZoo = await db.query(
