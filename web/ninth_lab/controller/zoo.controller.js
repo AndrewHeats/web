@@ -11,10 +11,10 @@ class ZooController{
         const responce = await db.query(`SELECT * FROM zoo`);
         res.json(responce.rows)
     }
-    // async getAllZoo(req, res) {
-    //     const allZoos = await db.query(`SELECT * FROM zoo`);
-    //     res.json(allZoos.rows);
-    // }
+//     async getAllZoo(req, res) {
+//         const allZoos = await db.query(`SELECT * FROM zoo`);
+//         res.json(allZoos.rows);
+//     }
     async getAllZoo(req, res) {
       try {
           const { minArea, maxArea, sortBy, searchInput } = req.query;

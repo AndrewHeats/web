@@ -11,6 +11,7 @@ function ViewMoreButton(){
     const [zooTypeData, setBackendData] = useState([]);
     const [visibleItems, setVisibleItems] = useState(3);
     const [loading, setLoading] = useState(true); 
+
   
     useEffect(() => {
       setLoading(true); 

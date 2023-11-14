@@ -1,4 +1,6 @@
 import ItemTemplate from "./zoo_template";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import zoo1 from "./images/zoo1.png";
 import zoo2 from "./images/zoo2.png";
 import zoo3 from "./images/zoo3.png";
@@ -24,11 +26,12 @@ let zoo_list = [
 ];
 
 
-function Zoos(){
+function Zoos({data = []}){
+
     return (
         <div className="_container">
             
-        {zoo_list.map((zoo, index) => (
+        {data.map((zoo, index) => (
             <ItemTemplate
             key={index}
             imgSrc={zoo.imgSrc}
