@@ -23,6 +23,7 @@ const CatalogSearch = ({ applyFilter }) => {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="selectFilter"
                 >
+
                 <option value="area">Sort by area</option>
                 <option value="price">Sort by price</option>
                 <option value="location">Sort by location</option>

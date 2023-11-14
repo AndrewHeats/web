@@ -31,14 +31,15 @@ function Zoos({data = []}){
     return (
         <div className="_container">
             
-        {data.map((zoo, index) => (
-            <ItemTemplate
-            key={index}
-            imgSrc={zoo.imgSrc}
-            title={zoo.title}
-            desc={zoo.desc}
-            />
-        ))}      
+            {data.map(({ title, description, imageSrc }, idx) => (
+          <ItemTemplate
+            key={idx}
+            title={title}
+            desc={description}
+            imageSrc={imageSrc}
+            id={idx}
+          />
+        ))}
         </div>
     );
 }

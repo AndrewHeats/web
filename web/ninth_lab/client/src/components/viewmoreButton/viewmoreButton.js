@@ -7,25 +7,8 @@ import '../../components/viewmoreButton/viewmoreButton.css';
 
 
 
-function ViewMoreButton(){
-    const [zooTypeData, setBackendData] = useState([]);
+function ViewMoreButton( zooTypeData){   
     const [visibleItems, setVisibleItems] = useState(3);
-    const [loading, setLoading] = useState(true); 
-
-  
-    useEffect(() => {
-      setLoading(true); 
-      axios.get("https://127.0.0.1:5500/api/zootypes")
-        .then((response) => {
-          setBackendData(response.data);
-          setLoading(false); 
-        })
-        .catch((error) => {
-          console.error('Помилка під час отримання даних:', error);
-          setLoading(false); 
-        });
-    }, []);
-    
     const showMore = () => {
         setVisibleItems((prevVisibleItems) => prevVisibleItems + 3); 
       };

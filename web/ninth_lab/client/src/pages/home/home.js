@@ -4,30 +4,31 @@ import React, { useEffect, useState } from "react";
 import Loading from "../../components/loading/Loading";
 import Zoos from '../../components/zoos/zoos';
 import '../../components/zoos/zoos.css';
-import ViewMoreButton from '../../components/viewmoreButton/viewmoreButton';
 import '../../components/viewmoreButton/viewmoreButton.css';
-import {getZooTypeData} from '../../fetching.js';
+import axios from 'axios'
+
 
 
 
 function Home() {
   const [zooTypeData, setBackendData] = useState([]);
   const [visibleItems, setVisibleItems] = useState(3);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
-    setLoading(true); 
-    getZooTypeData()
+    // setLoading(true); 
+    axios.get("http://127.0.0.1:5500/api/zootypes")
       .then((response) => {
-        console.log(zooTypeData)
+        
         setBackendData(response.data);
-        setLoading(false); 
+        console.log(zooTypeData)
+        // setLoading(false); 
       })
       .catch((error) => {
         console.error('Помилка під час отримання даних:', error);
-        setLoading(false); 
+        // setLoading(false); 
       });
-  }, []);
+  },[]);
 
   const showMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 3); 
@@ -40,10 +41,14 @@ function Home() {
       {loading ? (
       <Loading /> 
     ) : (
-      <>
+      <div className='zoosiki'>
         <Zoos data={zooTypeData.slice(0, visibleItems)} />
-        <ViewMoreButton />
-      </>
+        <div className='box'>
+          {visibleItems < zooTypeData.length && (
+            <button onClick={showMore} className='viewMore'>View more</button>
+          )}
+        </div>
+      </div>
     )}
     </div>
   );
