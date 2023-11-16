@@ -23,36 +23,38 @@ const CatalogSearch = ({ applyFilter }) => {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="selectFilter"
                 >
-
                 <option value="area">Sort by area</option>
                 <option value="price">Sort by price</option>
                 <option value="location">Sort by location</option>
               </select>
             </div>
-            <p class="sorted-by">Zoos sorted by: area/price/location</p>
           </div>
           <div class="area-inputs">
             <label for="minArea">Minimum area</label>
             <input type="number"
               name="minArea"
+              className="minArea"
               value={minArea}
               onChange={(e) => setMinArea(e.target.value)} />
             
             <label for="maxArea">Maximum area</label>
             <input type="number"
               name="maxArea"
+              className="maxArea"
               value={maxArea}
               onChange={(e) => setMaxArea(e.target.value)}  />
-          <label>
-            Search
-            <input
-              type="text"
-              name="searchInput"
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-              placeholder="Type something..."
-            />
-          </label>
+          <div className="search">
+            <label>
+              Search
+              <input
+                type="text"
+                name="searchInput"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                placeholder="Type something..."
+              />
+            </label>
+          </div>
           </div>
           <button class="apply-button" onClick={handleApplyClick}>Apply</button>
         </div>

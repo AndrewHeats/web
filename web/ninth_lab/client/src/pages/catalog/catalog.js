@@ -14,7 +14,7 @@ import zoo4 from "./zoosPhoto/Zoo4.png";
 import zoo5 from "./zoosPhoto/Zoo5.png";
 import zoo6 from "./zoosPhoto/Zoo6.png";
 import zoo7 from "./zoosPhoto/Zoo7.png";
-import axios from "axios";
+
 
 const zoodata = [
   {
