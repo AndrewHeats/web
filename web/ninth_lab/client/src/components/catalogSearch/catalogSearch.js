@@ -28,20 +28,33 @@ const CatalogSearch = ({ applyFilter }) => {
                 <option value="location">Sort by location</option>
               </select>
             </div>
-            <p class="sorted-by">Zoos sorted by: area/price/location</p>
           </div>
           <div class="area-inputs">
             <label for="minArea">Minimum area</label>
             <input type="number"
               name="minArea"
+              className="minArea"
               value={minArea}
               onChange={(e) => setMinArea(e.target.value)} />
             
             <label for="maxArea">Maximum area</label>
             <input type="number"
               name="maxArea"
+              className="maxArea"
               value={maxArea}
               onChange={(e) => setMaxArea(e.target.value)}  />
+          <div className="search">
+            <label>
+              Search
+              <input
+                type="text"
+                name="searchInput"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                placeholder="Type something..."
+              />
+            </label>
+          </div>
           </div>
           <button class="apply-button" onClick={handleApplyClick}>Apply</button>
         </div>
