@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { getDetailedZooInfo } from "../../fetching";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import Loading from "../../components/loading/Loading";
 import { NavLink } from "react-router-dom";
@@ -12,6 +13,20 @@ const ZooViewMore = () => {
   const [zooData, setZooData] = useState(null);
   const [loading, setLoading] = useState(true);
 
+
+  const addZoo = ()=>{
+    dispatch({
+      type: "ADD_ZOO",
+      payload:{
+        id: zooData.id, 
+        img: defaultZooImage,
+        name: zooData.name,
+        price: zooData.price,
+        count: 1,
+      },
+    });
+
+  };
   useEffect(() => {
     setLoading(true);
     getDetailedZooInfo(id)
@@ -24,6 +39,7 @@ const ZooViewMore = () => {
         console.error("Помилка під час отримання даних про велосипед:", error);
       });
   }, [id]);
+  
 
 
 
@@ -69,7 +85,7 @@ const ZooViewMore = () => {
             <p className="price">Price of zoo: {zooData.price} $</p>
             <div className="button_list">
               <NavLink to="/Catalog">Go back</NavLink>
-              <button>Add to cart</button>
+              <button onClick={()=>addZoo()}>Add to cart</button>
             </div>
           </div>
           </div>

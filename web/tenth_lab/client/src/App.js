@@ -7,6 +7,7 @@ import "./components/nav/nav.css";
 import Footer from "./components/footer/footer";
 import "./components/footer/footer.css";
 import Home from "./pages/home/home";
+import Cart from "./pages/cart/cart";
 import Catalog from "./pages/catalog/catalog";
 import ZooViewMore from "./pages/item/item";
 
@@ -20,7 +21,7 @@ function App() {
         <Route path="/" element = {<Home/>} />
         <Route path="/Catalog" element ={<Catalog/>} />
         <Route path="/Catalog/:id" element={< ZooViewMore/>} />
-        <Route path="/Cart" element ={<div class="cart">Its Cart page</div>} />
+        <Route path="/Cart" element ={<Cart/>} />
       </Routes>
       <Footer />
     </Router>
