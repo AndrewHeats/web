@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { incrementCount, decrementCount } from "./action";
 import { useState, useEffect } from "react";
+import "./cart.css" 
 
 const Cart = () => {
   const zooList = useSelector((state) => state.zooList);
@@ -29,9 +30,10 @@ const Cart = () => {
 
   return (
     <div className="cart_inner" >
-      <div>
+      <div className="cart_items">
         {filteredZooList.map((zoo, index) => (
           <NavLink
+            className={"item"}
             exact="true"
             to={`/Catalog/${zoo.id}`}
             style={{ textDecoration: "none", color: "black" }}
@@ -62,8 +64,8 @@ const Cart = () => {
         </p>
       )}
       <div className="cart_buttons">
-        <NavLink to="/Catalog">Back to Catalog</NavLink>
-        {totalPrice > 0 && <button>Continue</button>}
+        <NavLink to="/Catalog" className={"back"}>Back to Catalog</NavLink>
+        {totalPrice > 0 && <button className="continue">Continue</button>}
       </div>
     </div>
   );

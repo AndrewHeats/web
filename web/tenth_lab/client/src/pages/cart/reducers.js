@@ -9,9 +9,10 @@ const defaultState = {
   export const reducer = (state = defaultState, action) => {
     switch (action.type) {
       case "ADD_ZOO":
+        console.log(action)
         const foundIndex = findIndexByName(state.zooList, action.payLoad.name);
         if (foundIndex === -1) {
-          return { ...state, zooList: [...state.bikeList, action.payLoad] };
+          return { ...state, zooList: [...state.zooList, action.payLoad] };
         } else {
           const updatedZooList = [...state.zooList];
           updatedZooList[foundIndex] = {
@@ -25,7 +26,7 @@ const defaultState = {
         return {
           ...state,
           zooList: state.zooList.map((zoo) => {
-            if (zoo.name === action.payload.name) {
+            if (zoo.name === action.payLoad.name) {
               return { ...zoo, count: zoo.count + 1 };
             }
             return zoo;
@@ -35,7 +36,7 @@ const defaultState = {
         return {
           ...state,
           zooList: state.zooList.map((zoo) => {
-            if (zoo.name === action.payload.name && zoo.count > 0) {
+            if (zoo.name === action.payLoad.name && zoo.count > 0) {
               return { ...zoo, count: zoo.count - 1 };
             }
             return zoo;

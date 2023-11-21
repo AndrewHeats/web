@@ -12,12 +12,13 @@ const ZooViewMore = () => {
   const { id } = useParams();
   const [zooData, setZooData] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const dispatch = useDispatch();
 
   const addZoo = ()=>{
+    console.log(zooData.name)
     dispatch({
       type: "ADD_ZOO",
-      payload:{
+      payLoad:{
         id: zooData.id, 
         img: defaultZooImage,
         name: zooData.name,
