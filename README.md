@@ -33,6 +33,6 @@
 ### Лабораторна робота №9 (Варіант 9)
 Посилання на вітку (https://github.com/AndrewHeats/web/tree/ninth_lab)
 ***
-### Лабораторна робота №9 (Варіант 9)
+### Лабораторна робота №10 (Варіант 9)
 Посилання на вітку (https://github.com/AndrewHeats/web/tree/tenth_lab)
 ***
