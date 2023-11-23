@@ -16,6 +16,7 @@ const ZooViewMore = () => {
 
   const addZoo = ()=>{
     console.log(zooData.name)
+    alert("Zoo added to cart");
     dispatch({
       type: "ADD_ZOO",
       payLoad:{
